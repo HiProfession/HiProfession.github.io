@@ -22,6 +22,11 @@ jobs:
           cd rect-app
           npm install  # Replace with your package manager (yarn, pnpm) if needed
 
+      - name: Set Git Info
+        run: |
+          git config user.email "cfk2001@gmail.com"
+          git config user.name "Christian"
+
       - name: Build the React app
         run: | 
           cd rect-app
