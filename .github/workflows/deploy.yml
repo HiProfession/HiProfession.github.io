@@ -18,7 +18,11 @@ jobs:
           node-version: 16
 
       - name: Install dependencies
-        run: npm install  # Replace with your package manager (yarn, pnpm) if needed
+        run: | 
+          cd rect-app
+          npm install  # Replace with your package manager (yarn, pnpm) if needed
 
       - name: Build the React app
-        run: npm run deploy  # Replace with your build command
+        run: | 
+          cd rect-app
+          npm run deploy  # Replace with your build command
