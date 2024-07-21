@@ -1,0 +1,24 @@
+name: Deploy to rect_app
+
+on:
+  push:
+    branches:
+      - production  # the branch to trigger deployment on
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest 
+
+    steps:
+      - uses: actions/checkout@v3  # Checks out your code from the repository
+
+      - name: Use Node.js 16  # Adjust the Node.js version as needed
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm install  # Replace with your package manager (yarn, pnpm) if needed
+
+      - name: Build the React app
+        run: npm run deploy  # Replace with your build command
