@@ -1,38 +1,24 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  background: #0b2721;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  @apply shadow-lg rounded-md w-[400px] aspect-square bg-amber-400 mx-auto my-10 flex ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-image {
+  @apply relative rounded-l-md w-1/2 h-full bg-amber-50 overflow-clip float-left;
+  background: url("./assets/christian_mh.jpg") center no-repeat;
+  background-size: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-link{
+  @apply border-black border opacity-25 rounded-md hover:opacity-50 text-xs font-bold w-5 text-center aspect-square absolute left-0.5 top-0.5;
 }
